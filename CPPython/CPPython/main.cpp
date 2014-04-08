@@ -11,8 +11,13 @@
 
 int main( int argc, char *argv[] )
 {
-	printf("Hello, world!");
+	Py_SetProgramName(argv[0]);  /* optional but recommended */
+	Py_Initialize();
+	PyRun_SimpleString("from time import time,ctime\n"
+		"print 'Today is',ctime(time())\n");
+	Py_Finalize();
 	
+	system("pause");
 
 	return 0;
 }
