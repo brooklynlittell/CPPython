@@ -12,3 +12,7 @@ def pi(a,b):
 
 def returnString():
 	return "hello world"
+
+def returnBool():
+	return False
+
